@@ -1,0 +1,14 @@
+{
+  "name": "intelligential",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caracol.js",
+  "scripts": {
+    "start": "",
+    "dev": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
