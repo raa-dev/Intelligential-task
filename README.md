@@ -16,6 +16,10 @@ node caracol.js
 * Archivos binarios adjuntos en el directorio
 ## Prueba 3: mini app
 * Caso práctico: sistema de gestión de inventario para librería 
+* Antes de ejecutar la app es necesario instalar las dependencias:
+```
+npm install
+```
 * Para correr la app en ambiente de desarrollo usaremos Node.js y NPM desde la terminal ejecutando:
 ``````
 npm run dev
