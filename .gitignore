@@ -2,3 +2,7 @@
 .gitignore
 /.vscode/
 /dist/
+/prueba2/*.mwb
+/prueba2/*.mwb.bak
+/prueba2/*.drawio.png
+/prueba2/*.drawio
