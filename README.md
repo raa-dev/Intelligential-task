@@ -1,5 +1,5 @@
 # README
-El contenido del repositorio se divide en tres, de acuerdo a las pruebas solicitadas por Intelligencial. A cada prueba le corresponde un directorio.
+El contenido del repositorio se divide en tres, de acuerdo a las pruebas solicitadas por Intelligential. A cada prueba le corresponde un directorio.
 ## Prueba 1: Algoritmo
 * Diseño e implementación de algoritmo para matriz **N x M**: recorrido de caracol.
 * El algoritmo recorre los márgenes de la matriz hasta llegar a su centro sin repetir su trayectoria. Devuelve un vector o arreglo unidimensional con el mismo número de elementos.

@@ -11,6 +11,10 @@ const BookSchema = {
         type: DataTypes.INTEGER,
         unique: true
     },
+    author: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
     title: {
         allowNull: false,
         type: DataTypes.STRING
@@ -19,9 +23,17 @@ const BookSchema = {
         type: DataTypes.TEXT,
         allowNull: false
     },
+    publisher: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     year: {
         allowNull: false,
         type: DataTypes.INTEGER
+    },
+    image: {
+        type: DataTypes.STRING,
+        allowNull: true
     },
     createdAt: {
         allowNull: false,

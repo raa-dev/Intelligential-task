@@ -16,7 +16,6 @@ const createCustomerSchema = Joi.object({
 
 const updateCustomerSchema = Joi.object({
     name: name,
-    lastname: lastName,
     email: email
 });
 

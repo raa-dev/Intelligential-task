@@ -1,12 +1,16 @@
 {
   "name": "intelligential",
   "version": "1.0.0",
-  "description": "",
+  "description": "sistema de gestión de inventario para una librería | prueba intelligential",
   "main": "caracol.js",
   "scripts": {
-    "start": "nodemon ./prueba3/src/server/index.js",
-    "dev": "node ./prueba3/src/server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./prueba3/src/server/index.js",
+    "start": "node ./prueba3/src/server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrations:generate": "sequelize-cli migration:generate --name",
+    "migrations:run": "sequelize-cli db:migrate",
+    "migrations:revert": "sequelize-cli db:migrate:undo",
+    "migrations:delete": "sequelize-cli db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +21,7 @@
   "dependencies": {
     "@hapi/boom": "^9.1.4",
     "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "joi": "^17.5.0",

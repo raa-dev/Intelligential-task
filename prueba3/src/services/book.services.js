@@ -1,7 +1,7 @@
 //header files
 const boom = require('@hapi/boom');
 const { Op } = require('sequelize');
-const { models } = require('../../libs/sequelize.js');
+const { models } = require('../../libs/sequelize');
 
 // service layout for books
 class BookService {

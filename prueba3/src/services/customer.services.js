@@ -9,25 +9,21 @@ class CustomerService {
     }
 
     async create(data) {
-        const hash = await bcrypt.hash(data.user.password, 10);
+        const hash = await bcrypt.hash(data.customer.password, 10);
         const newData = {
             ...data,
-            user: {
-                ...data.user,
+            customer: {
+                ...data.customer,
                 password: hash
             }
         }
-        const newCustomer = await models.Customer.create(newData, {
-            include: ['user']
-        });
-        delete newCustomer.dataValues.user.dataValues.password;
+        const newCustomer = await models.Customer.create(newData);
+        delete newCustomer.dataValues.customer.dataValues.password;
         return newCustomer;
     }
     
     async find() {
-        const answer = await models.Customer.findAll({
-            include: ['user']
-        });
+        const answer = await models.Customer.findAll();
         return answer;
     }
     
@@ -37,6 +33,13 @@ class CustomerService {
             throw boom.notFound('customer not found');
         }
         return customer;
+    }
+
+    async findByEmail(email) {
+        const answer = await models.Customer.findOne({
+            where: { email }
+        });
+        return answer;
     }
     
     async update(id, change) {

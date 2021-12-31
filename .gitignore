@@ -7,3 +7,6 @@
 /prueba2/*.drawio.png
 /prueba2/*.drawio
 .env
+.sequelizerc
+docker-compose.yml
+postgres_data

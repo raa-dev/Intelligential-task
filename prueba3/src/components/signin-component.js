@@ -4,13 +4,21 @@ export const signinComponent = {
             title: 'Sign in',
             email: '',
             password: '',
-            name: ''
+            name: '',
+            customers: []
         }
     },
 
     methods: {
         signIn() {
-            alert('hello');
+            let data = {
+                name: this.name,
+                email: this.email,
+                password: this.password,
+            };
+            alert('hola ' + data.name);
+            this.customers.push(data);
+            alert(this.customers[0].password);
         }
     },
 

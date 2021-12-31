@@ -13,7 +13,7 @@ const CategorySchema = {
     name: {
         allowNull: false,
         unique: true,
-        type: DataTypes.STRINGcategories
+        type: DataTypes.STRING
     },
     createdAt: {
         allowNull: false,
