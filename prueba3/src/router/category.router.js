@@ -39,7 +39,7 @@ router.get('/:id',
 
 //POST
 router.post('/',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(createCategorySchema,'body'),
     async (req, res, next) => {
         try {
@@ -54,7 +54,7 @@ router.post('/',
 
 //patch
 router.patch('/:id',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(createCategorySchema, 'params'),
     validatorHandler(updateCategorySchema,'body'),
     async (req, res) => {
@@ -72,7 +72,7 @@ router.patch('/:id',
 );
 //delete
 router.delete('/:id', 
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     async (req, res) => {
         const { id } = req.params;
         const deletedCategory = await service.delete(id);

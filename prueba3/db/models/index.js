@@ -8,6 +8,7 @@ function setupModels(sequelize) {
     Category.init(CategorySchema, Category.config(sequelize));
     Book.init(BookSchema, Book.config(sequelize));
 
+    Category.associate(sequelize.models);
     Book.associate(sequelize.models);
 };
 

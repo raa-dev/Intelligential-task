@@ -28,6 +28,44 @@ npm run dev
 ``````
 npm run start
 ``````
+### Base de Datos
+* La gestión de la RDB (PostgreSQL) es a través de Sequelize (ORM) y así facilitar su integración con Node.JS
+* La app está contenida y virtualizada utilizando `Docker`. La configuración de servicios se tiene que agregar en un archivo `docker-compose.yml`. 
+* Además, crear un archivo `.env` para guardar las variables de ambiente. Ejemplo:
+``````
+PORT=8080
+DB_USER=user
+DB_PASSWORD=password
+DB_HOST='localhost'
+DB_NAME='my_db'
+DB_PORT='5432'
+JWT_SECRET=token
+DATABASE_URL='postgres://user:password@localhost:5432/my_db'
+``````
+
+### API Rest
+* La arquitectura de la app está construida como una API Rest.
+``````
+API_URL/api/v1/
+``````
+Toda interacción con la API tiene que hacerse a través de esa URL. El routing de `customers`, `books` y `categories` está construido sobre ella. Para hacer peticiones a cada endpoint:
+``````
+//books endpoint
+API_URL/api/v1/books
+
+//categories endpoint
+API_URL/api/v1/categories
+
+//customers endpoint
+API_URL/api/v1/customers
+``````
+* Peticiones habilitadas
+  * GET
+  * POST
+  * DELETE
+  * PATCH
+
+
 ### Tecnologías back-end
 * **Express.js**: Creación del servidor con arquitectura API REST, manejo de middlewares y routing
 * **Sequelize**: ORM como sistema de administración de la base de datos.

@@ -16,7 +16,7 @@ const passport = require('passport');
 
 //query tipo size
 router.get('/',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(queryBookSchema, 'query'),
     async (req, res, next) => {
         try {
@@ -29,7 +29,7 @@ router.get('/',
 });
 
 router.get('/:id',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(getBookSchema, 'params'),
     async (req, res, next) => {
     try {
@@ -45,7 +45,7 @@ router.get('/:id',
 
 //POST
 router.post('/',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(createBookSchema, 'body'),
     async (req, res, next) => {
         try {
@@ -60,7 +60,7 @@ router.post('/',
 
 //patch
 router.patch('/:id',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(createBookSchema, 'params'),
     validatorHandler(updateBookSchema, 'body'),
     async (req, res, next) => {
@@ -76,7 +76,7 @@ router.patch('/:id',
 );
 //delete
 router.delete('/:id', 
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     async (req, res, next) => {
     try {
         const { id } = req.params;

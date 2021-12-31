@@ -7,7 +7,7 @@ const author = Joi.string()
 .max(25);
 const title = Joi.string()
 .min(2)
-.max(15);
+.max(70);
 const year = Joi.number().integer().min(4);
 const publisher = Joi.string();
 const image = Joi.string().uri();
@@ -36,7 +36,6 @@ const  updateBookSchema = Joi.object({
     year: year,
     description: description,
     publisher: publisher,
-    image: image,publisher: publisher,
     image: image,
     categoryId
 });
