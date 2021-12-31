@@ -9,7 +9,7 @@ class CustomerService {
     }
 
     async create(data) {
-        const hash = await bcrypt.hash(data.customer.password, 10);
+        const hash = await bcrypt.hash(data.password, 10);
         const newData = {
             ...data,
             customer: {
@@ -18,7 +18,7 @@ class CustomerService {
             }
         }
         const newCustomer = await models.Customer.create(newData);
-        delete newCustomer.dataValues.customer.dataValues.password;
+        delete newCustomer.dataValues.password;
         return newCustomer;
     }
     

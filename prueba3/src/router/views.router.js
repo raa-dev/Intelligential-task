@@ -6,6 +6,7 @@ const options = {
 }
 //adding static files
 router.use('/styles', express.static('./prueba3/public/styles'));
+router.use('/components', express.static('../prueba3/src/components'));
 
 router.get('/', async (req, res, next) => {
     let home = "index.html";

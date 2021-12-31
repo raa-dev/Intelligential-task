@@ -12,6 +12,10 @@ const CustomerSchema = {
         allowNull: false,
         type: DataTypes.STRING,
     },
+    password: {
+        allowNull: false,
+        type: DataTypes.STRING
+    },
     email: {
         allowNull: false,
         type: DataTypes.STRING,

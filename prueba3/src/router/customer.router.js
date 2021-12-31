@@ -11,7 +11,7 @@ const service = new CustomerService();
 const passport = require('passport');
 
 router.get('/', 
-    passport.authenticate('jwt', { session: false }),    
+    // passport.authenticate('jwt', { session: false }),    
     async (req, res, next) => {
     try {
         const customers = await service.find();
@@ -23,7 +23,7 @@ router.get('/',
 });
 
 router.get('/:id',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(getCustomerSchema, 'params'),
     async (req, res, next) => {
         try {
@@ -40,7 +40,7 @@ router.get('/:id',
 
 //POST
 router.post('/',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(createCustomerSchema, 'body'),
     async (req, res, next) => {
         try {
@@ -55,7 +55,7 @@ router.post('/',
 
 //patch
 router.patch('/:id',
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     validatorHandler(createCustomerSchema, 'params'),
     validatorHandler(updateCustomerSchema, 'body'),
     async (req, res) => {
@@ -74,7 +74,7 @@ router.patch('/:id',
 
 //delete
 router.delete('/:id', 
-    passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: false }),
     async (req, res, next) => {
     try {
         const { id } = req.params;

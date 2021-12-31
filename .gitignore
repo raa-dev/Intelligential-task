@@ -10,3 +10,4 @@
 .sequelizerc
 docker-compose.yml
 postgres_data
+.eslintrc.json
