@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <title>Intelligential | Prueba 3</title>
 </head>
 <body>
     <header>
-
-    </header>
-    <main>
         <h1>
             Librería Intelligential
         </h1>
+    </header>
+    <main>
         <div id="app">
-            <login-component></login-component>
-            <signin-component></signin-component>
+            <login-component v-if="true"></login-component>
+            <signin-component v-if="false"></signin-component>
+            <library-component v-if="true"></library-component>
         </div>
     </main>
+    <footer>
+        
+    </footer>
     <script type="module" src="../../src/components/index.js"></script>
 </body>
 </html>
