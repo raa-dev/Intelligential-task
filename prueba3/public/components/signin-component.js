@@ -13,7 +13,7 @@ export const signinComponent = {
     methods: {
         signIn() {
             axios
-            .post('http://localhost:8080/api/v1/customers', {
+            .post('https://immense-garden-99230.herokuapp.com/api/v1/customers', {
                 name: this.name,
                 email: this.email,
                 password: this.password

@@ -58,7 +58,7 @@ export const libraryComponent = {
                 year: this.year
             };
             axios
-                .post('http://localhost:8080/api/v1/books', data)  
+                .post('https://immense-garden-99230.herokuapp.com/api/v1/books', data)  
                 .catch(err => {
                     this.errored = true;
                     console.error(err.message);
@@ -67,7 +67,7 @@ export const libraryComponent = {
         },
         inventory() {
             axios
-                .get('http://localhost:8080/api/v1/books')
+                .get('https://immense-garden-99230.herokuapp.com/api/v1/books')
                 .then(res => {
                         this.apiAnsw.push(res.data)
                     })

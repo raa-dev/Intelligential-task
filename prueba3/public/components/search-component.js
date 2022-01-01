@@ -22,7 +22,7 @@ export const searchComponent = {
     methods: {
         async search() {
             axios
-                .get('http://localhost:8080/api/v1/books')
+                .get('https://immense-garden-99230.herokuapp.com/api/v1/books')
                 .then(res => {
                     this.cont.push(res.data)
                 })

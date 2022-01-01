@@ -18,7 +18,7 @@ export const loginComponent = {
                 password: this.password
             };
             axios
-            .post('http://localhost:8080/api/v1/auth/login', data)  
+            .post('https://immense-garden-99230.herokuapp.com/api/v1/auth/login', data)  
             .catch(err => {
                 this.vista = false;
                 this.respuesta = err;
