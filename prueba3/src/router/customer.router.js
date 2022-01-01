@@ -40,7 +40,7 @@ router.get('/:id',
 
 //POST
 router.post('/',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     validatorHandler(createCustomerSchema, 'body'),
     async (req, res, next) => {
         try {

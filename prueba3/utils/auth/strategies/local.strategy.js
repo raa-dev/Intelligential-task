@@ -1,7 +1,7 @@
 const { Strategy } = require('passport-local');
 const AuthService = require('../../../src/services/auth.services.js');
-
 const service = new AuthService();
+const passport = require('passport');
 
 const LocalStrategy = new Strategy({
     usernameField:'email',
@@ -9,8 +9,8 @@ const LocalStrategy = new Strategy({
 },
 async (email, password, done) => {
     try {
-        const user = await service.getUser(email, password);
-        done(null, user);
+        const customer = await service.getCustomer(email, password);
+        return done(null, customer);
     } catch (error) {
         done(error, false);
     }

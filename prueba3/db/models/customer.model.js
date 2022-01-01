@@ -6,7 +6,8 @@ const CustomerSchema = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        unique: true
     },
     name: {
         allowNull: false,
@@ -19,6 +20,12 @@ const CustomerSchema = {
     email: {
         allowNull: false,
         type: DataTypes.STRING,
+        unique: true
+    },
+    role: {
+    allowNull: false,
+    type: DataTypes.STRING,
+    defaultValue: 'customer'
     },
     createdAt: {
         allowNull: false,

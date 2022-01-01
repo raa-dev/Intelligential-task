@@ -7,6 +7,7 @@ const password = Joi.string()
 .min(3)
 .max(15);
 const email =  Joi.string();
+const role = Joi.string().min(5);
 
 const getCustomerSchema = Joi.object({
     id: id.required(),
@@ -15,13 +16,15 @@ const getCustomerSchema = Joi.object({
 const createCustomerSchema = Joi.object({
     name: name.required(),
     password: password.required(),
-    email: email.required()
+    email: email.required(),
+    role: role
 });
 
 const updateCustomerSchema = Joi.object({
     name: name,
     password: password,
-    email: email
+    email: email,
+    role: role
 });
 
 

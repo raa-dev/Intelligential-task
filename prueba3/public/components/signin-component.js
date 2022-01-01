@@ -5,25 +5,29 @@ export const signinComponent = {
             email: '',
             password: '',
             name: '',
-            customers: []
+            respuesta: '',
+            vista: true
         }
     },
 
     methods: {
         signIn() {
-            let data = {
+            axios
+            .post('http://localhost:8080/api/v1/customers', {
                 name: this.name,
                 email: this.email,
-                password: this.password,
-            };
-            alert('hola ' + data.name);
-            this.customers.push(data);
-            alert(this.customers[0].password);
+                password: this.password
+            })
+            .then(response => response.redirect('/user'))
+            .catch(err => {
+                this.vista = false;
+                this.respuesta = err;
+            })
         }
     },
 
     template: `
-    <div class="signin-container">
+    <div class="signin-container" v-if="vista">
         <form>
             <h2>{{ title }}</h2>
             <input type="text" placeholder="name" 
@@ -32,10 +36,17 @@ export const signinComponent = {
             class="input-button" v-model="email"><br />
             <input type="password" placeholder="Password"
             class="input-button" v-model="password"><br />
-            <input type="button" value="Sign in" class="input-button" @click="signIn">
+            <a href="/user"><input type="submit" value="Sign in" class="input-button" @click="signIn"></a>
         </form>
-        <span>¿Ya tienes cuenta?<br />
-        <a href="#">¡Inicia sesión!</a></span>
+        <div class="signin-container-redirect">
+            <span>¿Ya tienes cuenta?<br />
+            <a href="/login">¡Inicia sesión!</a></span>
+        </div>
+    </div>
+    <div v-model="respuesta"
+    class="signin-container" v-else>
+        {{respuesta.message}} <br />
+        <a href="/signin">Vuelve a intentarlo</a>
     </div>
     `
 };

@@ -1,6 +1,9 @@
 import { loginComponent }  from './login-component.js';
 import { signinComponent } from './signin-component.js';
-import { libraryComponent } from './library-component.js'
+import { libraryComponent } from './library-component.js';
+import { searchComponent } from './search-component.js';
+import { homeComponent } from './home-component.js';
+import { userComponent } from './user-component.js'
 
 
 export const app = new Vue({
@@ -8,6 +11,13 @@ export const app = new Vue({
     components: {
         loginComponent,
         signinComponent,
-        libraryComponent
-    }
+        libraryComponent,
+        searchComponent,
+        homeComponent,
+        userComponent
+    },
+
+    mounted() {
+
+    },    
 });

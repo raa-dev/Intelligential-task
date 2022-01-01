@@ -5,6 +5,7 @@ html {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
+    font-family: sans-serif;
 }
 
 header h1 {
@@ -23,6 +24,10 @@ main {
     padding: 2rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 .input-button {
     padding: 1rem;
     margin: 3px;
@@ -30,33 +35,64 @@ main {
     border-radius: 5px;
 }
 
+.home-container {
+    padding: 3.4rem;
+    width: 40rem;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    border: solid 0 black;
+    border-radius: 13px;
+    box-shadow: whitesmoke 13px 13px 34px 3px;
+    background: linear-gradient(to bottom right, whitesmoke, rgba(7, 7, 7, 0.178));
+}
+
 .signin-container {
     padding: 3.4rem;
     justify-content:center;
     align-items: center;
+    text-align: center;
     border: solid 0 black;
     border-radius: 13px;
     box-shadow: whitesmoke 13px 13px 34px 3px;
+    background: linear-gradient(to bottom right, whitesmoke, rgba(7, 7, 7, 0.178));
 }
+
+.signin-container .signin-container-redirect {
+    padding: 1rem;
+}
+
 
 .login-container {
     padding: 3.4rem;
     justify-content:center;
     align-items: center;
+    text-align: center;
     border: solid 0 black;
     border-radius: 13px;
     box-shadow: whitesmoke 13px 13px 34px 3px;
+    background: linear-gradient(to bottom right, whitesmoke, rgba(7, 7, 7, 0.178));
+}
+
+.login-container .login-container-redirect {
+    padding: 1rem;
+}
+
+.login-container .login-container-redirect span {
+    padding: .5rem;
+    margin: .5rem;
 }
 
 .library-container {
-    padding: 3.4rem;
+    padding: 3rem;
     justify-content:center;
     align-items: center;
+    text-align: center;
     border: solid 0 black;
     border-radius: 13px;
     box-shadow: whitesmoke 13px 13px 34px 3px;
-    width: 34rem;
-
+    width: 45rem;
+    background: linear-gradient(to bottom right, whitesmoke, rgba(7, 7, 7, 0.178));
 }
 
 .inventario-container {
@@ -77,4 +113,15 @@ main {
 
 .inventario-container-table-body tr td {
 
+}
+
+footer {
+    padding: 3rem;
+}
+
+footer span {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
 }

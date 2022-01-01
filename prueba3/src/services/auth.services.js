@@ -10,11 +10,11 @@ class AuthService {
     async getCustomer(email, password) {
         const customer = await service.findByEmail(email);
         if (!customer) {
-        throw boom.unauthorized();
+            throw boom.unauthorized();
         }
         const isMatch = await bcrypt.compare(password, customer.password);
         if (!isMatch) {
-        throw boom.unauthorized();
+            throw boom.unauthorized();
         }
         delete customer.dataValues.password;
         return customer;
@@ -22,12 +22,13 @@ class AuthService {
 
     signToken(customer) {
         const payload = {
-        sub: customer.id,
+            sub: customer.id,
+            role: customer.role
         }
         const token = jwt.sign(payload, config.jwtSecret);
         return {
-        customer,
-        token
+            customer,
+            token
         };
     }
 
