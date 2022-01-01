@@ -1,0 +1,6 @@
+module.exports = {
+	'config': './prueba3/db/config.js',
+	'models-path': './prueba3/db/models/',
+	'migrations-path': './prueba3/db/migrations/',
+	'seeders-path': './prueba3/db/seeders/'
+}
