@@ -1,7 +1,9 @@
+
 export const libraryComponent = {
     data () {
         return {
             buscador: '',
+            respuesta: '',
             title: '',
             author: '',
             publisher: '',
@@ -18,6 +20,27 @@ export const libraryComponent = {
 
     methods: {
         search() {
+            let data = {
+                buscador: this.buscador,
+                year: this.year
+            };
+            this.books.find(book => {
+                let answer = `Autor: ${book.author}. Título: ${book.title}. Editorial: ${book.publisher}. Año: ${book.year}`;
+                switch (data.buscador) {
+                case book.title:
+                    return this.respuesta = answer;
+                    break;
+                case book.author:
+                    return this.respuesta = answer;
+                    break;
+                case book.publisher:
+                    return this.respuesta = answer;
+                    break;
+                default:
+                    return this.respuesta = "No existe";
+                    break;
+                }
+            });
         },
         addBook() {            
             let data = {
@@ -27,6 +50,9 @@ export const libraryComponent = {
                 year: this.year
             };
             return this.books.push(data);
+        },
+        async inventory() {
+            this.books = await getBooks();
         }
     },
 
@@ -42,28 +68,29 @@ export const libraryComponent = {
                 <input class="input-button" type="button" value="Buscar"
                 @click="search"><br />
             </form>
+            <span v-model="respuesta">{{respuesta}}<span>
         </div>
         <div class="addBook-container">
-        <form>
-            <label><strong>Agrega un libro</strong></label> <br />
-            <input class="input-button" type="text" placeholder="título"
-            v-model="title"><br />
-            <input class="input-button" type="text" placeholder="autor"
-            v-model="author"><br />
-            <input class="input-button" type="text" placeholder="editorial"
-            v-model="publisher"><br />
-            <input class="input-button" type="number" placeholder="año"
-            v-model="year"><br />
-            <input class="input-button" type="button" value="Agregar"
-            @click="addBook"><br />
-        </form>
-    </div>
+            <form>
+                <label><strong>Agrega un libro</strong></label> <br />
+                <input class="input-button" type="text" placeholder="título"
+                v-model="title"><br />
+                <input class="input-button" type="text" placeholder="autor"
+                v-model="author"><br />
+                <input class="input-button" type="text" placeholder="editorial"
+                v-model="publisher"><br />
+                <input class="input-button" type="number" placeholder="año"
+                v-model="year"><br />
+                <input class="input-button" type="button" value="Agregar"
+                @click="addBook"><br />
+            </form>
+        </div>
         <div class="inventario-container">
             <section>
             <h1>Inventario</h1>
             <article>
-                <table>
-                    <tbody>
+                <table class="inventario-container-table">
+                    <tbody class="inventario-container-table-body">
                         <tr v-for="book in books" :key=book>
                             <td>{{ book.author }}</td>
                             <td>{{ book.title }}</td>
