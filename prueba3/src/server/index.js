@@ -24,7 +24,7 @@ const options = {
         }
     }
 }
-app.use(cors(options));
+app.use(cors());
 //auth
 require('../../utils/auth/');
 app.use(passport.initialize());
