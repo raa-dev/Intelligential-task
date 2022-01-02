@@ -16,6 +16,15 @@ node caracol.js
 * Archivos binarios adjuntos en el directorio
 ## Prueba 3: mini app
 URL: https://immense-garden-99230.herokuapp.com/
+
+endpoints vistas
+```
+/login
+/signin
+/search
+/addBook
+```
+
 * Caso práctico: sistema de gestión de inventario para librería 
 * Antes de ejecutar la app es necesario instalar las dependencias:
 ```

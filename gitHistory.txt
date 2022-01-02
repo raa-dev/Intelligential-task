@@ -546,3 +546,176 @@
   Date:   Tue Dec 28 11:26:56 2021 -0600
   
       npm init. Adding readme & gitignore files
+* commit 5976418 (HEAD -> main, origin/main)
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 20:24:26 2022 -0600
+| 
+|     fixing cors issue, README updated
+| 
+* commit dd1e025 (heroku/main, production)
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 20:22:19 2022 -0600
+| 
+|     updating README
+| 
+* commit 7954863
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 19:38:34 2022 -0600
+| 
+|     removing cors whitelist just 4 check
+| 
+* commit 9f4ff7e
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 19:31:30 2022 -0600
+| 
+|     trying to fix cors issue2
+| 
+* commit 11d8c48
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 19:26:50 2022 -0600
+| 
+|     trying to fix cors issue
+| 
+* commit a59ae9c
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 18:26:48 2022 -0600
+| 
+|     checking script on html
+| 
+* commit 0c3122c
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 18:25:32 2022 -0600
+| 
+|     checking script on html
+| 
+* commit a75d815
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 18:19:27 2022 -0600
+| 
+|     still not reading vue
+| 
+* commit b677e51
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 18:17:18 2022 -0600
+| 
+|     updating cors error on script on vue2
+| 
+* commit 34943ca
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 18:15:27 2022 -0600
+| 
+|     updating cors error on script on vue
+| 
+* commit 4c5f13e
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 18:11:25 2022 -0600
+| 
+|     cors error on prod
+| 
+* commit 7eed0d9
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 17:52:29 2022 -0600
+| 
+|     updating cors
+| 
+* commit 501e315
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 17:39:39 2022 -0600
+| 
+|     update env file
+| 
+* commit 879d25c
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 17:36:21 2022 -0600
+| 
+|     sequelizerc on production
+| 
+* commit 841a911
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 17:26:50 2022 -0600
+| 
+|     adding githistory file
+| 
+* commit 74ee04b
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Sat Jan 1 17:25:55 2022 -0600
+| 
+|     setting api on heroku
+| 
+* commit 0c7aa79
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Fri Dec 31 19:10:51 2021 -0600
+| 
+|     prooving binding content on library component
+| 
+* commit ecc77f0
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Fri Dec 31 15:46:07 2021 -0600
+| 
+|     updating README. debbuging category service. API is working in all endpoints
+| 
+* commit 0b813f9
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Fri Dec 31 15:07:50 2021 -0600
+| 
+|     debbuging create service on customer. testing API
+| 
+* commit 90fb7c5
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Fri Dec 31 01:31:03 2021 -0600
+| 
+|     debbuging sequelize typos and root options on index router. Views still need a hand
+| 
+* commit 8604d12
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Fri Dec 31 01:28:10 2021 -0600
+| 
+|     debbuging sequelize typos and root options on index router
+| 
+* commit 57dddb7
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Fri Dec 31 00:53:20 2021 -0600
+| 
+|     routes and middlewares added | auth, validators, errorhandlers
+| 
+* commit 5962b8f
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Thu Dec 30 21:04:24 2021 -0600
+| 
+|     creating some vue components
+| 
+* commit a2b3ba0
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Thu Dec 30 18:49:52 2021 -0600
+| 
+|     creating the architecture. Some entities and services were added
+| 
+* commit e28920c
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Thu Dec 30 00:55:56 2021 -0600
+| 
+|     server added
+| 
+* commit b9e046b
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Wed Dec 29 22:53:23 2021 -0600
+| 
+|     API REST and App diagrams added
+| 
+* commit 55e1b78
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Wed Dec 29 22:06:27 2021 -0600
+| 
+|     adding ERD, RDB and server diagrams. Updating README
+| 
+* commit 04e9fcf
+| Author: rdrx <rodrx20@gmail.com>
+| Date:   Wed Dec 29 12:18:24 2021 -0600
+| 
+|     submit matrix algorithm
+| 
+* commit 8225247
+  Author: rdrx <rodrx20@gmail.com>
+  Date:   Tue Dec 28 11:26:56 2021 -0600
+  
+      npm init. Adding readme & gitignore files
