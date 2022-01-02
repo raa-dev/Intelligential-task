@@ -14,7 +14,7 @@ const passport = require('passport');
 
 app.use(express.json());
 //dar acceso a múltiples orígenes, cors
-const whitelist = ['http://localhost:8080', 'https://localhost:8000', 'http://192.168.100.44', 'http://192.168.100.9', 'https://immense-garden-99230.herokuapp.com/'];
+const whitelist = ['http://localhost:8080', 'https://localhost:8000', 'http://192.168.100.44', 'http://192.168.100.9', 'https://immense-garden-99230.herokuapp.com/', 'https://rdr-x.github.io/intelligential-library-views/'];
 const options = {
     origin: (origin, callback) => {
         if (whitelist.includes(origin) || !origin) {
