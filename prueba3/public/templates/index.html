@@ -25,6 +25,30 @@
         RDRX | 2021
     </span>        
     </footer>
-    <script type="module" src="../components/index.js"></script>
+    <script>
+        import { loginComponent }  from '../components/login-component.js';
+        import { signinComponent } from '../components/signin-component.js';
+        import { libraryComponent } from '../components/library-component.js';
+        import { searchComponent } from '../components/search-component.js';
+        import { homeComponent } from '../components/home-component.js';
+        import { userComponent } from '../components/user-component.js'
+
+
+        export const app = new Vue({
+            el: '#app',
+            components: {
+                loginComponent,
+                signinComponent,
+                libraryComponent,
+                searchComponent,
+                homeComponent,
+                userComponent
+            },
+
+            mounted() {
+
+            },    
+        });
+    </script>
 </body>
 </html>
